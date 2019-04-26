@@ -21,5 +21,9 @@ Analysis confirms that the TC's requirement to reuse DITA 2.0 spec content puts 
 
 - The required variations in content between Lightweight DITA and full DITA further increase the complexity of content sharing. Examples: Lightweigt DITA spec topics must address three source formats (HDITA, MDITA, and XDITA). The Lightweight DITA SC prefers the term "components" over "elements" or "element types", to explicitly avoid any perception that XML is a preferred Lightweight DITA source format.
 
+## Notes from Carlos (unedited)
 
-
+- Cannot write topics as XDITA/LwDITA (no <example> and other tags)
+- Can we bring our own examples?
+- Rework/filter indexterms
+- Topic titles have to be component and not element (e.g., short description instead of <shortdesc>)
