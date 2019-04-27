@@ -13,9 +13,10 @@
 </metadata></prolog>
 <refbody>
      <section id="usage-information">
-      <draft-comment author="alan">I don't think the indexterms apply. Could filter
-        out.</draft-comment>
+     
           <title><draft-comment>Do we need more content or context here?</draft-comment>Usage information</title>
+       <draft-comment author="alan">I don't think the indexterms apply. Could filter
+       out.</draft-comment>
           <dl>
                <dlentry>
                     <dt>XDITA</dt>

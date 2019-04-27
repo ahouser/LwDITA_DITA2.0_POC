@@ -18,9 +18,10 @@
   </prolog>
 <refbody>
     <section id="usage-information">
+      <title>Usage information</title>
       <draft-comment author="alan">Metadata here does not apply without major
         surgery.</draft-comment>
-      <title>Usage information</title>
+     
       <dl>
         <dlentry>
           <dt>XDITA</dt>
@@ -35,9 +36,9 @@
           <dd><p>First block, if it is a paragraph, after title </p></dd>
         </dlentry>
       </dl>
-      <p>When present in topics, the content of the <ph props="2.0"><xmlelement>shortdesc</xmlelement> element</ph> <ph props="lwdita">short description component</ph> is
+      <p>When present in topics, the content of the <ph props="dita2.0"><xmlelement>shortdesc</xmlelement> element</ph> <ph props="lwdita">short description component</ph> is
         the first paragraph of the topic. It also is used for link previews and search results.</p>
-      <sectiondiv props="2.0"> 
+      <sectiondiv props="dita2.0"> 
       <p>When present in maps, the <xmlelement>shortdesc</xmlelement> element is associated with
           <xmlelement>topicref</xmlelement> elements. This enables map authors to accomplish the
         following goals:</p>
@@ -56,10 +57,10 @@
     <section>
       <title>Rendering expectations</title>
       <p>Processors <term outputclass="RFC-2119">SHOULD</term> render the content of the <ph
-          props="2.0"><xmlelement>shortdesc</xmlelement> element</ph>
+          props="dita2.0"><xmlelement>shortdesc</xmlelement> element</ph>
         <ph props="lwdita">short description component</ph> as the initial paragraph of the
         topic.</p>
-      <sectiondiv props="2.0">
+      <sectiondiv props="dita2.0">
       <p props="full-dita">When processors generate link previews that are based on the map
         context, they <term outputclass="RFC-2119">SHOULD</term> use the content of the
         <xmlelement>shortdesc</xmlelement> that is located in the map rather than the

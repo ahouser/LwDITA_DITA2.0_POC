@@ -179,8 +179,9 @@
         </dlentry>
       </dl>
     </section>
-    <example id="lw-example" props="lwdita">
-      <fig id="fig_lbg_jx2_4hb">
+    <example>
+      <title>Examples</title>
+      <fig id="fig_lbg_jx2_4hb" props="lwdita">
         <title>XDITA example</title>
         <p id="p_mbg_jx2_4hb">The following example shows the use of the data component to specify
           the author of an XDITA topic.</p>
@@ -188,17 +189,17 @@
     &lt;data name="author" value="Victoria Fernando"/>
   &lt;/prolog></codeblock>
       </fig>
-      <fig id="fig_nbg_jx2_4hb">
+      <fig id="fig_nbg_jx2_4hb" props="lwdita">
         <title>HDITA example</title>
         <p id="p_obg_jx2_4hb">The following example shows the use of the data component to specify
-          the author of an HDITA topic, via the HTML5 &lt;meta> tag.</p>
+          the author of an HDITA topic, via the HTML5 <xmlelement>meta</xmlelement> tag.</p>
         <codeblock>&lt;!DOCTYPE html>
 &lt;head>
   &lt;title>An innovative, attractive, and out of the ordinary concept&lt;/title>
   &lt;meta name="author" content="Victoria Fernando">
 &lt;/head></codeblock>
       </fig>
-      <fig id="fig_pbg_jx2_4hb">
+      <fig id="fig_pbg_jx2_4hb" props="lwdita">
         <title>MDITA example</title>
         <p id="p_qbg_jx2_4hb">The following example shows the use of the data component to specify
           the author of an MDITA topic, via a YAML header.</p>
@@ -211,21 +212,19 @@ author: Victoria Fernando
 
   Installation of your lighting kit includes installing the light bulbs into light fixtures, preparing the remote control, and programming lighting groups.</codeblock>
       </fig>
-    </example>
-    <example id="example" props="dita2.0">
-      <title>Examples</title>
-      <fig>
+
+      <fig props="dita2.0">
         <title>Using the <xmlatt>name</xmlatt> attribute on unspecialized
             <xmlelement>data</xmlelement> elements</title>
         <p>The following code sample shows how the <xmlelement>data</xmlelement> element can be used
-          to provide metdata. Rendering tools that recognize this metadata can automatically apply
+          to provide metadata. Rendering tools that recognize this metadata can automatically apply
           highlighting to the code.</p>
         <codeblock>&lt;codeblock>
   &lt;data name="codestyle" value="javascript"/>
   &lt;!-- JavaScript code block -->
 &lt;/codeblock></codeblock>
       </fig>
-      <fig id="fig_qsw_2lc_t2b">
+      <fig id="fig_qsw_2lc_t2b" props="dita2.0">
         <title>Nesting <xmlelement>data</xmlelement> elements for complex metadata</title>
         <p>The following code sample shows how nested <xmlelement>data</xmlelement> elements can
           provide complex inventory metadata for a part that is described in the topic.</p>
@@ -243,7 +242,7 @@ author: Victoria Fernando
   &lt;/body>
 &lt;/topic></codeblock>
       </fig>
-      <fig>
+      <fig props="dita2.0">
         <title>Specializing <xmlelement>data</xmlelement> for structured metadata</title>
         <p>The following code sample contains specializations of the <xmlelement>data</xmlelement>
           element: <xmlelement>change-item</xmlelement>, <xmlelement>change-completed</xmlelement>,
