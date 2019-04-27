@@ -26,3 +26,4 @@ Analysis confirms that the TC's requirement to reuse DITA 2.0 spec content puts 
 * The LwDITA SC would like to bring its own examples for the LwDITA spec
 * We would need to rework/filter indexterms
 * In a Lightweight DITA spec, topic titles have to be components and not elements (e.g., short description instead of `<shortdesc>`)
+* We think this whole exercise is poo.
