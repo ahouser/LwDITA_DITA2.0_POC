@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="data" xml:lang="en-us">
+<title>Data</title>
+  <shortdesc>Data is a generic component that represents metadata within a topic or map.
+    Complex metadata is represented by nested data structures.</shortdesc>
+<prolog><metadata>
+<keywords props="dita2.0">
+        <indexterm>data</indexterm>
+        <indexterm>property <indexterm>data</indexterm></indexterm>
+        <indexterm>specialization elements<indexterm>data</indexterm></indexterm>
+      </keywords>
+</metadata></prolog>
+<refbody>
+    <section>
+      <draft-comment author="alan">Need to conditionalize indexterms for LwDITA.</draft-comment>
+      <title>Usage information</title>
+      <p id="p_bkd_zv2_4hb" props="lwdita">The data component supports specification of metadata on
+        LwDITA components or topics. Nesting is supported for creating complex metadata structures.
+        A metadata property specified using a data component usually applies to the current
+        component. To set topic-level metadata, place the data component in the prolog (XDITA) or
+        YAML header (MDITA). </p>
+      <p props="dita2.0">The primary purpose of the <xmlelement>data</xmlelement> element is as a
+        specialization base. Because it can nest, it can be used to create complex metadata
+        structures. Since it is available in both block and inline contexts, the
+          <xmlelement>data</xmlelement> element can specify properties for most element types.</p>
+      <p props="dita2.0">A metadata property specified using a <xmlelement>data</xmlelement> element
+        usually applies to the element that contains the <xmlelement>data</xmlelement> element. When
+        located in <xmlelement>prolog</xmlelement> and <xmlelement>metadata</xmlelement> elements,
+        the property applies to the topic as a whole. When located in the
+          <xmlelement>topicmeta</xmlelement> element, the property applies to the referenced topic.
+          <ph>The <xmlelement>data-about</xmlelement> element can be used to identify the subject of
+          the property with an explicit reference.</ph></p>
+      <note type="caution" props="lwdita">By default, processors do not render the content of the
+        data component. Use the data component only for properties; do not use it to embed text as
+        part of the content flow.</note>
+      <note type="caution" props="dita2.0">By default, processors do not render the content of the
+          <xmlelement>data</xmlelement> element. Use the <xmlelement>data</xmlelement> element only
+        for properties; do not use it to embed text as part of the content flow. For example, while
+        it is possible to specialize <xmlelement>data</xmlelement> to create a special kind of
+        paragraph where <xmlelement>p</xmlelement> is not allowed, when the content is shared, other
+        tools or processors will ignore the specialized <xmlelement>data</xmlelement>
+        element.</note>
+      </section>
+    <section><title>Rendering expectations</title>
+      <p props="lwdita">By default, processors <term outputclass="RFC-2119">SHOULD</term> treat data
+        components as unknown metadata; the contents of data components <term outputclass="RFC-2119"
+          >SHOULD NOT</term> be rendered.</p>
+      <p props="lwdita">Processors that recognize a particular data component <term
+          outputclass="RFC-2119">MAY</term> make use of that component to trigger specialized
+        rendering.</p>
+      <p id="p_uxc_kv2_4hb" props="dita2.0">By default, processors <term outputclass="RFC-2119"
+          >SHOULD</term> treat <xmlelement>data</xmlelement> elements as unknown metadata; the
+        contents of <xmlelement>data</xmlelement> elements <term outputclass="RFC-2119">SHOULD
+          NOT</term> be rendered.</p>
+      <p id="p_vxc_kv2_4hb" props="dita2.0">Processors that recognize a particular
+          <xmlelement>data</xmlelement> element <term outputclass="RFC-2119">MAY</term> make use of
+        that element to trigger specialized rendering.</p>  
+    </section>
+    <section id="attributes">
+      <title>Attributes</title>
+      <dl>
+        <dlentry>
+          <dt>data attributes</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>name</xmlatt>, <xmlatt>value</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd>(On meta tag)</dd>
+                <dd><xmlatt>name</xmlatt>, <xmlatt>content</xmlatt></dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Universal attributes</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>outputclass</xmlatt>, <xmlatt>class</xmlatt>, <xmlatt>id</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>class</xmlatt>, <xmlatt>id</xmlatt></dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Metadata</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>props</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>data-props</xmlatt></dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Localization</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>dir</xmlatt>, <xmlatt>xml:lang</xmlatt>, <xmlatt>translate</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>dir</xmlatt>, <xmlatt>lang</xmlatt>, <xmlatt>translate</xmlatt></dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Linking</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>href</xmlatt>, <xmlatt>format</xmlatt>, <xmlatt>scope</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>href</xmlatt>, <xmlatt>type</xmlatt>, <xmlatt>rel</xmlatt></dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Reuse</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>keyref</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>data-keyref</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>MDITA</dt>
+                <dd>In an MDITA core-profile topic, a key reference is represented using the GitHub
+                  Flavored Markdown syntax for shortcut reference links:
+                    <codeph>[key-value]</codeph>. There is no equivalent for content reference in
+                  the MDITA core profile.</dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+      </dl>
+    </section>
+    <example id="example" props="lwdita">
+      <fig id="fig_lbg_jx2_4hb">
+        <title>XDITA example</title>
+        <p id="p_mbg_jx2_4hb">The following example shows the use of the data component to specify
+          the author of an XDITA topic.</p>
+        <codeblock>&lt;prolog>
+    &lt;data name="author" value="Victoria Fernando"/>
+  &lt;/prolog></codeblock>
+      </fig>
+      <fig id="fig_nbg_jx2_4hb">
+        <title>HDITA example</title>
+        <p id="p_obg_jx2_4hb">The following example shows the use of the data component to specify
+          the author of an HDITA topic, via the HTML5 &lt;meta> tag.</p>
+        <codeblock>&lt;!DOCTYPE html>
+&lt;head>
+  &lt;title>An innovative, attractive, and out of the ordinary concept&lt;/title>
+  &lt;meta name="author" content="Victoria Fernando">
+&lt;/head></codeblock>
+      </fig>
+      <fig id="fig_pbg_jx2_4hb">
+        <title>MDITA example</title>
+        <p id="p_qbg_jx2_4hb">The following example shows the use of the data component to specify
+          the author of an MDITA topic, via a YAML header.</p>
+        <codeblock>
+---
+id: franchise-intro
+author: Victoria Fernando
+---
+# Installing and Setting up Remote Lighting
+
+  Installation of your lighting kit includes installing the light bulbs into light fixtures, preparing the remote control, and programming lighting groups.</codeblock>
+      </fig>
+    </example>
+    <example id="example" props="dita2.0">
+      <title>Examples</title>
+      <fig>
+        <title>Using the <xmlatt>name</xmlatt> attribute on unspecialized
+            <xmlelement>data</xmlelement> elements</title>
+        <p>The following code sample shows how the <xmlelement>data</xmlelement> element can be used
+          to provide metdata. Rendering tools that recognize this metadata can automatically apply
+          highlighting to the code.</p>
+        <codeblock>&lt;codeblock>
+  &lt;data name="codestyle" value="javascript"/>
+  &lt;!-- JavaScript code block -->
+&lt;/codeblock></codeblock>
+      </fig>
+      <fig id="fig_qsw_2lc_t2b">
+        <title>Nesting <xmlelement>data</xmlelement> elements for complex metadata</title>
+        <p>The following code sample shows how nested <xmlelement>data</xmlelement> elements can
+          provide complex inventory metadata for a part that is described in the topic.</p>
+        <codeblock>&lt;topic id="sample">
+  &lt;title>How to purchase items from the warehouse&lt;/title>
+  &lt;prolog>
+    &lt;data name="inventory">
+      &lt;data name="aisle" value="4"/>
+      &lt;data name="bin" value="13"/>
+      &lt;data name="restock" value="weekly"/>
+    &lt;/data>
+  &lt;/prolog>
+  &lt;body>
+    &lt;!-- ... -->
+  &lt;/body>
+&lt;/topic></codeblock>
+      </fig>
+      <fig>
+        <title>Specializing <xmlelement>data</xmlelement> for structured metadata</title>
+        <p>The following code sample contains specializations of the <xmlelement>data</xmlelement>
+          element: <xmlelement>change-item</xmlelement>, <xmlelement>change-completed</xmlelement>,
+          and <xmlelement>change-summary</xmlelement>. These specialized elements each provide a
+          default for <xmlatt>name</xmlatt> inside the grammar files, so that processors can work
+          with the data without authors having to specify the attribute.</p>
+        <codeblock>&lt;topic id="data">
+  &lt;title>&lt;xmlelement>data&lt;/xmlelement>&lt;/title>
+  &lt;prolog>
+    &lt;change-historylist>
+      &lt;change-item>
+        &lt;change-completed>2017-08-20&lt;/change-completed>
+        &lt;change-summary>Refactored topic to use new template&lt;/change-summary>
+      &lt;/change-item>
+      &lt;change-item>
+        &lt;change-completed>2018-06-06&lt;/change-completed>
+        &lt;change-summary>Created new examples&lt;/change-summary>
+      &lt;/change-item>
+    &lt;/change-historylist>
+  &lt;/prolog>
+  &lt;body>
+    &lt;!-- ... -->
+  &lt;/body>
+&lt;/topic></codeblock>
+      </fig>
+    </example>
+  </refbody>
+</reference>

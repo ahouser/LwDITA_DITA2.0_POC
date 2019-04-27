@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="shortdesc" xml:lang="en-us">
+<title>Short description</title>
+  <shortdesc>A short description describes the purpose or main point of a
+    topic.</shortdesc>
+     <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>maps<indexterm>short descriptions in</indexterm></indexterm>
+        <indexterm>processing expectations<indexterm>link previews</indexterm><indexterm>short
+            descriptions</indexterm></indexterm>
+        <indexterm>short descriptions<indexterm>best
+            practices</indexterm><indexterm>overview</indexterm><indexterm>within
+              <xmlelement>abstract</xmlelement> elements</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+<refbody>
+    <section id="usage-information">
+      <draft-comment author="alan">Metadata here does not apply without major
+        surgery.</draft-comment>
+      <title>Usage information</title>
+      <dl>
+        <dlentry>
+          <dt>XDITA</dt>
+          <dd><p>&lt;shortdesc></p></dd>
+        </dlentry>
+        <dlentry>
+          <dt>HDITA</dt>
+          <dd><p>First element in article, if it is a paragraph, after title</p></dd>
+        </dlentry>
+        <dlentry>
+          <dt>MDITA (core and extended profiles)</dt>
+          <dd><p>First block, if it is a paragraph, after title </p></dd>
+        </dlentry>
+      </dl>
+      <p>When present in topics, the content of the <ph props="2.0"><xmlelement>shortdesc</xmlelement> element</ph> <ph props="lwdita">short description component</ph> is
+        the first paragraph of the topic. It also is used for link previews and search results.</p>
+      <sectiondiv props="2.0"> 
+      <p>When present in maps, the <xmlelement>shortdesc</xmlelement> element is associated with
+          <xmlelement>topicref</xmlelement> elements. This enables map authors to accomplish the
+        following goals:</p>
+      <ul>
+        <li>Associate a short description with a non-DITA object.</li>
+        <li>Provide a short description that is specific to the map context and used for link
+          previews.</li>
+        <li>Override the short description located in the associated DITA topic, when the
+            <xmlatt>copy-to</xmlatt> attribute is specified. Processors might not implement this
+          behavior.</li>
+      </ul>
+      <p>When a <xmlelement>shortdesc</xmlelement> element applies to an entire DITA map, it serves
+        as description only.</p>
+      </sectiondiv>
+    </section>
+    <section>
+      <title>Rendering expectations</title>
+      <p>Processors <term outputclass="RFC-2119">SHOULD</term> render the content of the <ph
+          props="2.0"><xmlelement>shortdesc</xmlelement> element</ph>
+        <ph props="lwdita">short description component</ph> as the initial paragraph of the
+        topic.</p>
+      <sectiondiv props="2.0">
+      <p props="full-dita">When processors generate link previews that are based on the map
+        context, they <term outputclass="RFC-2119">SHOULD</term> use the content of the
+        <xmlelement>shortdesc</xmlelement> that is located in the map rather than the
+        <xmlelement>shortdesc</xmlelement> that is located in the DITA topic. However,
+        processors <term outputclass="RFC-2119">SHOULD</term> use the content of the
+        <xmlelement>shortdesc</xmlelement> element in the DITA topic when they render
+        the topic itself, unless the <xmlatt>copy-to</xmlatt> attribute is specified on the
+        topic reference to the element.</p>
+      </sectiondiv>
+    </section>
+
+    <section id="attributes">
+      <title>Attributes</title>
+      <dl>
+        <dlentry>
+          <dt>Universal attributes</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>outputclass</xmlatt>, <xmlatt>class</xmlatt>, <xmlatt>id</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>class</xmlatt>, <xmlatt>id</xmlatt></dd>
+              </dlentry></dl>
+          </dd>
+          
+        </dlentry>
+        <dlentry>
+          <dt>Metadata</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>props</xmlatt></dd>                          </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>data-props</xmlatt></dd>
+              </dlentry></dl>
+          </dd>
+          
+        </dlentry>
+        <dlentry>
+          <dt>Localization</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>dir</xmlatt>, <xmlatt>xml:lang</xmlatt>, <xmlatt>translate</xmlatt></dd>                          </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>dir</xmlatt>, <xmlatt>lang</xmlatt>, <xmlatt>translate</xmlatt></dd>
+              </dlentry></dl>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Linking</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>href</xmlatt>, <xmlatt>format</xmlatt>, <xmlatt>scope</xmlatt></dd>                          </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>href</xmlatt>, <xmlatt>type</xmlatt>, <xmlatt>rel</xmlatt></dd>
+              </dlentry></dl>
+          </dd>
+          
+        </dlentry>
+        <dlentry>
+          <dt>Reuse</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>XDITA</dt>
+                <dd><xmlatt>keyref</xmlatt></dd>                          </dlentry>
+              <dlentry>
+                <dt>HDITA</dt>
+                <dd><xmlatt>data-keyref</xmlatt></dd>
+              </dlentry>
+              <dlentry>
+                <dt>MDITA</dt>
+                <dd>In an MDITA core-profile topic, a key reference is represented using the GitHub Flavored Markdown syntax for shortcut reference links: <codeph>[key-value]</codeph>. There is no equivalent for content reference in the MDITA core profile.</dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+        
+      </dl>
+    </section>
+    <example id="example" otherprops="examples">
+      <fig>
+        <title>XDITA example</title>
+        <p>The following example demonstrates the use of a short description in an XDITA topic.</p>
+        <codeblock> &lt;?xml version="1.0" encoding="UTF-8"?>
+ &lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "lw-topic.dtd">
+ &lt;topic id="install-and-setup">
+   &lt;title>Installing and Setting up Remote Lighting&lt;/title>
+   &lt;shortdesc>Installation of your lighting kit includes installing the light bulbs into
+   light fixtures, preparing the remote control, and programming lighting groups.
+   &lt;/shortdesc>
+  &lt;/topic></codeblock>
+      </fig>
+      
+      <fig>
+        <title>HDITA example</title>
+        <p>The following example demonstrates the use of a short description in an HDITA topic.</p>
+        <codeblock>  &lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
+  &lt;title>Installing and Setting up Remote Lighting&lt;/title>
+  &lt;/head>
+  &lt;body>
+   &lt;article id="install-and-setup">
+    &lt;h1>Installing and Setting up Remote Lighting&lt;/h1>
+    &lt;p>Installation of your lighting kit includes installing the light bulbs into light fixtures, preparing the remote control, and programming lighting groups.&lt;/p>
+  &lt;/article>
+  &lt;/body>
+  &lt;/html></codeblock>
+      </fig>
+      
+      
+      <fig>
+        <title>MDITA example</title>
+        <p>The following example demonstrates the use of a short description in an MDITA topic.</p>
+        <codeblock># Installing and Setting up Remote Lighting
+
+  Installation of your lighting kit includes installing the light bulbs into light fixtures, preparing the remote control, and programming lighting groups.</codeblock>
+        
+      </fig>
+    </example>
+  </refbody>
+</reference>
