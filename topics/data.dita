@@ -14,13 +14,31 @@
 </metadata></prolog>
 <refbody>
     <section>
-      <draft-comment author="alan">Need to conditionalize indexterms for LwDITA.</draft-comment>
+     
       <title>Usage information</title>
-      <p id="p_bkd_zv2_4hb" props="lwdita">The data component supports specification of metadata on
-        LwDITA components or topics. Nesting is supported for creating complex metadata structures.
-        A metadata property specified using a data component usually applies to the current
-        component. To set topic-level metadata, place the data component in the prolog (XDITA) or
-        YAML header (MDITA). </p>
+      <draft-comment author="alan">Need to conditionalize indexterms for LwDITA.</draft-comment>
+      <dl>
+        <dlentry>
+          <dt>XDITA</dt>
+          <dd><xmlelement>data</xmlelement></dd>
+        </dlentry>
+        <dlentry>
+          <dt>HDITA</dt>
+          <dd>
+            <xmlelement>meta</xmlelement> inside <xmlelement>head</xmlelement>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>MDITA (extended profile) </dt>
+          <dd>
+            <p>There is no specific syntax for data in MDITA core profile. In MDITA extended
+              profile, data is represented by any variables declared in a YAML front matter header.
+              The front matter must be the first block in the file and must be set between triple-
+              dashed lines. </p></dd>
+        </dlentry>
+      </dl>
+      <p props="lwdita">The data component supports specification of metadata on
+        LwDITA components or topics. Nesting is supported for creating complex metadata structures. A metadata property specified using a data component usually applies to the current component. To set topic-level metadata, place the data component in the prolog (XDITA), as a <xmlelement>meta</xmlelement> element inside the <xmlelement>head</xmlelement> (HDITA), or YAML header (MDITA). </p>
       <p props="dita2.0">The primary purpose of the <xmlelement>data</xmlelement> element is as a
         specialization base. Because it can nest, it can be used to create complex metadata
         structures. Since it is available in both block and inline contexts, the
@@ -161,7 +179,7 @@
         </dlentry>
       </dl>
     </section>
-    <example id="example" props="lwdita">
+    <example id="lw-example" props="lwdita">
       <fig id="fig_lbg_jx2_4hb">
         <title>XDITA example</title>
         <p id="p_mbg_jx2_4hb">The following example shows the use of the data component to specify
