@@ -11,7 +11,7 @@ Analysis confirms that the TC's requirement to reuse DITA 2.0 spec content puts 
 
 - This level of reuse nullifies the goal of the SC to author the Lightweight DITA specification in any of the initial Lightweight DITA authoring formats. For example, XDITA does not have the DITA `<example>` or `<xmlelement>` tags, which are heavily used in the DITA 2.0 topics.
 
-- (Related) Conref'ing/Keyref'ing directly from DITA 2.0 topics to Lightweight DITA is not possible, except for components provided in Lightweight DITA (namely <shortdesc>).
+- (Related) Conref'ing/Keyref'ing directly from DITA 2.0 topics to Lightweight DITA is not possible, except for components provided in Lightweight DITA (namely `<shortdesc>`).
 
 - Many differences in use cases between Lightweight DITA and DITA make sharing content highly tedious. For example, in DITA, the `<data>` element type provides a basis for specialization. In Lightweight DITA, it does not. (At least for Lightweight DITA 1.0, the SC has chosen to de-emphasize specialization). During this exercise, we find ourselves "cherry-picking" content from DITA 2.0 topics, often at the mid-paragraph sentence level.
 
